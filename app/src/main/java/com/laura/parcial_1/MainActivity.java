@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 String u = user.getText().toString();
                 String p = pass.getText().toString();
 
-                if ( u.isEmpty() && p.isEmpty() ) {
+                if ( u.isEmpty() || p.isEmpty() ) {
                     Toast.makeText(MainActivity.this, "Por favor llenar los campos", Toast.LENGTH_SHORT).show();
                 } else if (u.compareTo(correctUser) != 0 || p.compareTo(correctPass) != 0) {
                     Toast.makeText(MainActivity.this, "El usuario o la contraseña son incorrectos", Toast.LENGTH_SHORT).show();
